@@ -2,7 +2,9 @@
 title: "Mi Primer Markdown"
 author: "Ricardo Nieto"
 date: "2024-05-14"
-output: pdf_document
+output: 
+  pdf_document: 
+    keep_tex: true
 ---
 
 ```{r setup, include=FALSE}
@@ -10,6 +12,22 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## R Markdown
+
+Esto es una fórmula en LateX
+$$ \int_0^1 x\ dx = \left.\frac{x^2}{2}\right]_0^1 = \frac{1}{2}$$
+$$ \begin{matrix} a_{11} & a_{a2} \\ a_{21} & a_{22} \end{matrix} $$
+$$\begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{pmatrix} $$
+Para obtener determinantes
+
+$$\begin{vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{vmatrix} $$
+$$\begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{bmatrix} $$
+
+$$\begin{Vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{Vmatrix} $$
+$$\begin{Bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{Bmatrix} $$
+
+Ecuaciones en rmarkdown con LateX
+
+...
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -28,3 +46,13 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+## Nuestras propias chunks
+
+Vamos a calcular $\sqrt{2} - e^{-2}$:
+
+```{r miPrimeraChunk}
+sqrt(2) - exp(-2)
+```
+
